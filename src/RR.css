@@ -1,0 +1,21 @@
+.MainDiv{
+    width: 55rem;
+    height: 200px;
+    font-size: 14px;
+    overflow-y: scroll;
+    /* border: 1px solid gray; */
+    box-shadow: 1px 1px 5px 2px rgba(128, 128, 128, 0.605);
+
+}
+.HeadingText{
+    font-size: 12px;
+}
+#AgreeField{
+    font-size: 14px;
+}
+#startText{
+    font-size: 32px;
+}
+.RightComp{
+    width: 60%;
+}

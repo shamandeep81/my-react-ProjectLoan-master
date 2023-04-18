@@ -1,0 +1,8 @@
+.MainSuperComp{
+    position: relative;
+    transform: translate(-50%,2%);
+    left: 65%;
+    top: 50%;
+    /* border: 1px solid gray; */   
+    overflow: hidden;
+}

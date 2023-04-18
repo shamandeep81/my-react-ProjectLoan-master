@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport content=" width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0
+    minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Report - Add Business Details</title>
+  <link rel="stylesheet" href="https://loandpr.com/auth_project/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="https://loandpr.com/auth_project/assets/css/style.css">
+  <link rel="stylesheet" href="https://loandpr.com/auth_project/font-awesome/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://loandpr.com/auth_project/assets/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="sum()">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">LoanDPR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-md-6 text-right text-white">
+          Welcome harjit <a href="https://loandpr.com/auth_project/index.php/auth/logout"
+            class="nav-item text-white">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="container marketing">
+      <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-3 order-md-1">
+          <div class="sk-border-blue-light-v1  text-left rounded">
+            <section class="mb-30 mb-50">
+              <h4 class="media h6 mb-15">
+                <span class="d-flex align-self-center text-dark">Report Completion</span>
+                <span class="media-body align-self-center text-right" id="percent">70%</span>
+              </h4>
+
+              <div class="progress ">
+                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="60" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </section>
+            <section>
+              <ul class="list-unstyled mb-0 builder_nav">
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark "><i class="fa fa-check-square-o"></i>
+                    Start</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Basic Information</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Promoter Information</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Address</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Industry Type</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Business Segment</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Loan Type</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Purchase Assets</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Term Loan</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-primary"><i class="fa fa-check-square-o"></i>
+                    Working Capital</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Employment</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Prime Costs</span></li>
+                <li class="sk-border-blue-light-v1 mb-0"><span class="text-dark"><i class="fa fa-check-square-o"></i>
+                    Indirect Costs</span></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <div class="col-md-9 order-md-2 sk-border-blue-light-v1">
+          <form id="frmreport1" name="frmreport1" enctype="multipart/form-data" method="POST" accept-charset="utf-8"
+            action="https://loandpr.com/auth_project/index.php/ReportCont/workingcapital_submit">
+            <div class="h-100  mb-40">
+              <div id="basicinformation" class="" style="display: block;">
+                <h2 class="text-uppercase font-size-10 color-black mb-1">Working Capital Loan</h2>
+                <hr class="d-flex">
+                <!-- MAIN FIELDS -->
+                <div>
+                  <label><strong>If you want a loan for Working Capital Requirement : (Write "0" if you dont
+                      need)</strong><br /></label>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 align-self-center">
+                    <label class="mb-0" for="#firm">Working Capital Requirement (Rs.)</label>
+                  </div>
+                  <div class="col-md-4 align-self-center form-group">
+                    <input type="number" id="WorkCapReqAmount" name="WorkCapReqAmount" class="form-control col-md-12"
+                      value="0" onkeyup="sum();">
+                  </div>
+                  <div class="col-md-4 align-self-center form-group">
+                    <font color="blue"> Enter value in Rupees</font><br>
+                    <font color="red"> e.g.: For 1 Lakh enter 100000</font>
+                  </div>
+
+                  <div class="col-md-4 align-self-center">
+                    <label class="mb-0" for="#firm">Cash Credit / OD (max 75%) (Rs.)</label>
+                  </div>
+                  <div class="col-md-4 align-self-center form-group">
+                    <input type="number" id="CashCreditAmount" name="CashCreditAmount" class="form-control col-md-12"
+                      value="0">
+                  </div>
+                  <div class="col-md-4 align-self-center form-group">
+                    <font color="blue"> Enter value in Rupees</font><br>
+                    <font color="red"> e.g.: For 1 Lakh enter 100000</font>
+                  </div>
+
+                  <div class="col-md-4 align-self-center">
+                    <label class="mb-0" for="#firm">Own Contribution (Rs.)</label>
+                  </div>
+                  <div class="col-md-4 align-self-center form-group">
+                    <input type="number" id="OwnContributionAmountWorkCap" name="OwnContributionAmountWorkCap"
+                      placeholder="" class="form-control col-md-12" value="0">
+                  </div>
+                  <div class="col-md-4 align-self-center form-group">
+                    <font color="blue"> Enter value in Rupees</font><br>
+                    <font color="red"> e.g.: For 1 Lakh enter 100000</font>
+                  </div>
+
+                  <div class="col-md-4 align-self-center">
+                    <label class="mb-0" for="#firm">Rate of Interest (%) </label>
+                  </div>
+                  <div class="col-md-4 align-self-center form-group">
+                    <input type="number" step="0.01" id="RateofInterestWorkCap" name="RateofInterestWorkCap"
+                      placeholder="Add rate of interest" class="form-control col-md-12" value="10" required="required">
+                  </div>
+
+                </div>
+
+                <hr class="d-flex">
+
+                <div class="row">
+                  <div class="col-md-4 align-self-center">
+                    <label class="mb-0" for="#firm"><strong>Any other funding facility, please specify</strong></label>
+                  </div>
+                  <div class="col-md-6 align-self-center form-group">
+                    <input type="text" id="AnyOtherFundFacility" name="AnyOtherFundFacility"
+                      class="form-control col-md-9" value="">
+                  </div>
+                </div>
+
+                <div class="row example mb-5">
+
+                </div>
+
+              </div>
+            </div>
+            <div>
+              <div class="row ">
+                <div class="col-12">
+                  <button class="btn btn-block btn-primary mr-10 mb-15" id="create-report-btn" type="submit">Save &
+                    Continue</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+    <script>
+      function sum() {
+        var WorkCapReqAmount = document.getElementById('WorkCapReqAmount').value;
+        var result1 = parseInt(WorkCapReqAmount) * 0.75;
+        var result2 = parseInt(WorkCapReqAmount) * 0.25;
+
+        if (!isNaN(result1)) {
+          document.getElementById('CashCreditAmount').value = result1;
+          document.getElementById('OwnContributionAmountWorkCap').value = result2;
+        }
+      }
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </main>
+
+
+  </div>
+</body>
+
+</html>
